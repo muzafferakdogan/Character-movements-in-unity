@@ -8,19 +8,19 @@ public class DistanceModule : MonoBehaviour
     [SerializeField] private Transform[] target;
     private Vector3 dir;
     int i = 0;
-    
+
 
     private MovementModule _movementModule;
 
     void Start()
     {
-        _movementModule = GetComponent<MovementModule>();   
+        _movementModule = GetComponent<MovementModule>();
 
     }
-    
+
     void Update()
     {
-        if (Vector3.Distance(target[i].position, transform.position)>0.6f)
+        if (Vector3.Distance(target[i].position, transform.position) > 0.6f)
         {
             Rotate();
         }
@@ -29,8 +29,8 @@ public class DistanceModule : MonoBehaviour
             i++;
             Rotate();
         }
-                 
-        
+
+
     }
     private void Rotate()
     {
